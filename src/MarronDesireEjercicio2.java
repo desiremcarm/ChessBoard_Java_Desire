@@ -28,14 +28,14 @@ public class MarronDesireEjercicio2 {
         Scanner scan = new Scanner(System.in);
 
         // Asking for a pattern
-        System.out.println(ANSI_BLUE + "Provide your desired pattern. It must contain only 1 character. You can use a number, a symbol, a letter...");
+        System.out.println(ANSI_BLUE + "💬 Provide your desired pattern. It must contain only 1 character. You can use a number, a symbol, a letter...");
 
         // Reading pattern
         pattern = scan.next().charAt(0);
-        System.out.println("The character you've chosen is: " + pattern);
+        System.out.println("⭐ The character you've chosen is: " + pattern);
 
         // Asking for cell size
-        System.out.println("Provide a desired size for each cell on the board. It must be a value between 1 and 15, both included.");
+        System.out.println("💬 Provide a desired size for each cell on the board. It must be a value between 1 and 15, both included.");
 
         // Checking if given value is a positive integer between 1 and 15
         do {
@@ -47,7 +47,7 @@ public class MarronDesireEjercicio2 {
             size = scan.nextInt();
         }while((size >= MIN_SIZE && size >= MAX_SIZE) || size <= 0);
 
-        System.out.println(ANSI_BLUE + "The size you've chosen is: " + size);
+        System.out.println(ANSI_BLUE + "⭐ The size you've chosen is: " + size);
 
         // Main loop for the chess board
         for (int i = 1; i < BOARD_SIZE+1; i++) {
