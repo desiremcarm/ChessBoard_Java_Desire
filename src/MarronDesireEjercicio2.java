@@ -1,6 +1,5 @@
 // By Desiré Marrón Carmona 👩🏻
 
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class MarronDesireEjercicio2 {
