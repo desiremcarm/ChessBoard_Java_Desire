@@ -34,22 +34,47 @@ public class MarronDesireEjercicio2 {
         for (int i = 1; i < BOARD_SIZE+1; i++) {
 
             // Upper decoration row
-            System.out.print("\nstart row: " + i + "\n");
+            //System.out.print("\nstart row: " + i + "\n");
 
-            for (int j = 0; j < size; j++) {
+            for (int j = 0; j < (BOARD_SIZE * size) + 9; j++) {
+                System.out.print("-");
+            }
+            System.out.println("");
+
+            for (int h = 0; h < size; h++) { // Paint rows depending on given size
                 // Inner row with spots
 
                 for (int k = 1; k < BOARD_SIZE+1; k++) {
-                    if(((k+1)%2) == 0){
-                        System.out.print(" [Col:" + k + "] ");
+                    // Paint pattern depending if cell is even or not
+                    if((k%2) == 0){
+                        System.out.print("|");
+                        for (int l = 0; l < size; l++) {
+                            System.out.print(pattern);
+                        }
                     } else {
-                        System.out.print(" [Col:" + k + "] ");
+                        System.out.print("|");
+                        for (int l = 0; l < size; l++) {
+                            System.out.print(" ");
+                        }
                     }
+                    if(k+1 >= BOARD_SIZE+1){
+                        System.out.print("|");
+                    }
+                }
+
+                // Spacing each row
+                if((h+1) != size){
+                    System.out.println("");
                 }
             }
 
-            // Low decoration row
-            System.out.print("\nend row: " + i);
+            System.out.println("");
+
+            if((i+1) >= BOARD_SIZE+1){
+                for (int j = 0; j < (BOARD_SIZE * size) + 9; j++) {
+                    System.out.print("-");
+                }
+            }
 
 
         }
